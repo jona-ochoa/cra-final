@@ -3,6 +3,8 @@ import TaskList from "./list/TaskList";
 import Settings from "./settings/Settings";
 import { motion, AnimatePresence } from "framer-motion";
 
+
+
 /**
  * Funcion anonima para crear  un componente principal
  * @returns {React.Components} Componente principal de nuestra aplicación
@@ -16,7 +18,7 @@ const App = () => {
   const [showSettings, setShowSettings] = useState(true);
 
   useEffect(() => {
-      setDark(false)
+    setDark(false);
   }, []);
 
   /**
@@ -42,11 +44,10 @@ const App = () => {
           onExitComplete={() => null}
         >
           {showSettings && (
-            <motion.div 
-            initial={{ y: '100vh'}}
-            animate={{ y: '0'}}
-            exit={{ y: '100vh'}}
-
+            <motion.div
+              initial={{ y: "100vh" }}
+              animate={{ y: "0" }}
+              exit={{ y: "100vh" }}
             >
               <Settings toggleDark={toogleDark} />
             </motion.div>

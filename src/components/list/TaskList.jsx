@@ -58,7 +58,7 @@ const TaskList = ({ showSettings, setShowSettings }) => {
     <>
       <header className="flex justify-between">
         <h1 className="text-3xl text-sky-700 font-extrabold dark:text-sky-300">
-          Task List
+          Task List - hosted on : Firebase
         </h1>
         <motion.button
           whileHover={{ scale: 1.1 }}

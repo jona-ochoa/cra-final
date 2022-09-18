@@ -1,5 +1,24 @@
 import React from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
+ function Swale() { MySwal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Modo actualizado',
+  showConfirmButton: false,
+  timer: 1500,
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  }
+})
+ }
 
 const defaultConfig = {
   theme: "dark",
@@ -21,6 +40,7 @@ export default function Settings({ toggleDark }) {
       theme: oldConfig.theme === "light" ? "dark" : "light",
     }));
     toggleDark();
+    Swale()
   };
 
   return (
